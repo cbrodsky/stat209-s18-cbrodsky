@@ -4,7 +4,9 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
 library(dplyr)
 library(readr)
 library(ggplot2)
@@ -15,7 +17,7 @@ library(ggplot2)
 
 This dataset shows the food preferences of my classmates
 ```{r}
-class <- read_csv("C:\\Users\\cb9wf\\Desktop\\fav_restaurant.csv")
+class <- read_csv("https://raw.githubusercontent.com/URstats/stat209-s18-cbrodsky/master/fav_restaurant.csv")
 ```
 
 ## Plotting the Data
