@@ -1,0 +1,101 @@
+---
+title: "Lab 10: Filtering Data"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(fig.height = 5)
+knitr::opts_chunk$set(fig.width = 8.5)
+knitr::opts_chunk$set(out.width = "100%")
+knitr::opts_chunk$set(dpi = 300)
+
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(viridis)
+theme_set(theme_minimal())
+```
+
+
+```{r}
+flights <- read_csv("https://statsmaths.github.io/stat_data/flights.csv")
+```
+
+
+
+
+## Pick a dataset
+
+Today you will again have a choice of three datasets to work with. You can
+choose either to investigate the daily team ELO ratings in the NBA:
+
+
+
+Or swear words given in the movies of Quentin Tarantino:
+
+```{r}
+tarantino <- read_csv("https://statsmaths.github.io/stat_data/tarantino.csv")
+  tarantino_swears <- filter(tarantino, word == "fuck")
+  
+  ggplot(data=tarantino_swears, aes(x=movie))+
+  geom_bar()+
+  geom_bar(aes(fill = movie))+
+  xlab("Tarantino Movies")+
+  ylab("Number of Times Word Said")
+```
+
+##Analysis
+
+The previous chart demonstrates the number of times the word, "fuck" was said in a variety of Taraninto movies.
+
+```{r}
+tarantino <- read_csv("https://statsmaths.github.io/stat_data/tarantino.csv")
+  tarantino_new <- filter(tarantino, minutes_in < 5)
+  
+ggplot(data=tarantino_new, aes(x=movie))+
+  geom_bar()+
+  geom_bar(aes(fill = movie))+
+  xlab("Movies")+
+  ylab("Swear Words Count")+
+  ggtitle("Tarantino Movies With Swear Words W/in 5 Min")
+```
+
+
+```{r}
+tarantino <- read_csv("https://statsmaths.github.io/stat_data/tarantino.csv")
+  tarantino_third <- filter(tarantino, word)
+  
+  ggplot(data = tarantino_third, aes (x=word)
+
+```
+
+
+## Instructions
+
+This lab is similar to the last. You'll pick a dataset and then generate an
+analysis of that data using data visualizations. The difference here is that
+instead of a single plot, I would like you to construct 3-4 plots that
+together tell a linear story. Each plot should be separated by a sentence or
+two describing what the viewer should take away from the plot. Try to keep the
+plots similar in some way; perhaps each simply highlights a different subset
+of the data but has the same underlying layers.
+
+Notice that each of the datasets for today are larger than you will probably
+be able to use. You will need to filter the data to a particular team, year,
+subset of curse words. You may further filter the data to highlight an even
+smaller subset of the data within each plot.
+
+## Analysis
+
+
+
+
+
+
+
+
+
+
