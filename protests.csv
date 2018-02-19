@@ -7,9 +7,9 @@ baghdad,12,iraqi ,200,international
 kirkuk ,2,none,75,regional 
 anbar ,5,iraqi ,750,regional 
 baghdad,2,iranian ,15,international 
-salah-al-din,3,none,20,regional 
+salah_al_din,3,none,20,regional 
 syria ,5,syrian,15,international 
-salah al-din,0,iraqi,2,international 
+salah_al_din,0,iraqi,2,international 
 anbar ,3,syrian,100,international 
 anbar ,8,iraqi_syrian,400,international 
 anbar ,5,iraqi_isis,400,international 
@@ -17,20 +17,20 @@ anbar ,3,iraqi,30,international
 nineveh ,0,isis,50,international 
 nineveh ,1,iraqi,50,regional 
 anbar ,9,iraqi ,25,international 
-dhi qar,4,iraqi ,25,regional 
+dhi_qar,4,iraqi ,25,regional 
 baghdad,8,none,25,regional 
 diyala ,6,iraqi ,25,regional 
 basra ,15,iraqi ,35,regional 
-dhi qar ,4,iraqi ,25,regional 
+dhi_qar ,4,iraqi ,25,regional 
 basra ,1,tribal ,50,regional 
 baghdad,1,iraqi ,200,international 
 baghdad,5,iraqi ,1000,international 
 baghdad,5,iraqi ,1000,regional 
 karbala ,3,iraqi ,75,regional 
 baghdad,4,iraqi ,75,regional 
-dhi qar,2,iraqi,50,regional 
-dhi qar,2,iraqi ,20,regional 
-dhi qar,0,iraqi ,30,regionnal
+dhi_qar,2,iraqi,50,regional 
+dhi_qar,2,iraqi ,20,regional 
+dhi_qar,0,iraqi ,30,regionnal
 baghdad,3,iraqi,30,regional 
 karbala ,2,iraqi,30,regional 
 baghdad,1,turkish,15,regional 
@@ -42,10 +42,10 @@ diyala,0,iraqi_kurdish,20,regional
 israel ,2,israeli_kurdish,15,regional 
 sulimaniya ,4,none,20,international 
 kirkuk ,5,iraqi,75,regional 
-iraqi kurdistan ,0,israeli_kurdish,50,regional 
-iraqi kurdistan ,0,israeli_kurdish,250,regional 
-iraqi kurdistan ,0,israeli_kurdish,200,international 
-iraqi kurdistan ,0,kurdish ,500,international 
+iraqi_kurdistan ,0,israeli_kurdish,50,regional 
+iraqi_kurdistan ,0,israeli_kurdish,250,regional 
+iraqi_kurdistan ,0,israeli_kurdish,200,international 
+iraqi_kurdistan ,0,kurdish ,500,international 
 baghdad,11,iraqi ,20,regional 
 anbar ,2,iraqi ,75,regional 
 baghdad,15,tribal ,120,regional 
