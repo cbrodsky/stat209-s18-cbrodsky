@@ -1,52 +1,52 @@
 location ,number_of_banners,flags,population ,source
 anbar ,7.00,iraqi,200.00,international 
-anbar ,0.00,iraqi_isis,750.00,regional 
+anbar ,0.00,iraqi_isis,450.00,regional 
 nineveh ,7.00,iraqi ,75.00,regional 
 baghdad,9.00,iraqi ,200.00,international 
 baghdad,12.00,iraqi ,200.00,international 
 kirkuk ,2.00,none,75.00,regional 
-anbar ,5.00,iraqi ,750.00,regional 
-baghdad,2.00,iranian ,15.00,international 
-salah_al_din,3.00,none,20.00,regional 
-syria ,5.00,syrian,15.00,international 
-salah_al_din,0.00,iraqi,2.00,international 
+anbar ,5.00,iraqi ,550.00,regional 
+baghdad,2.00,iranian ,45.00,international 
+salah_al_din,3.00,none,45.00,regional 
+syria ,5.00,syrian,45.00,international 
+salah_al_din,0.00,iraqi,45.00,international 
 anbar ,3.00,syrian,100.00,international 
-anbar ,8.00,iraqi_syrian,400.00,international 
-anbar ,5.00,iraqi_isis,400.00,international 
+anbar ,8.00,iraqi_syrian,350.00,international 
+anbar ,5.00,iraqi_isis,350.00,international 
 anbar ,3.00,iraqi,30.00,international 
 nineveh ,0.00,isis,50.00,international 
 nineveh ,1.00,iraqi,50.00,regional 
-anbar ,9.00,iraqi ,25.00,international 
-dhi_qar,4.00,iraqi ,25.00,regional 
-baghdad,8.00,none,25.00,regional 
-diyala ,6.00,iraqi ,25.00,regional 
+anbar ,9.00,iraqi ,45.00,international 
+dhi_qar,4.00,iraqi ,45.00,regional 
+baghdad,8.00,none,45.00,regional 
+diyala ,6.00,iraqi ,45.00,regional 
 basra ,15.00,iraqi ,35.00,regional 
-dhi_qar ,4.00,iraqi ,25.00,regional 
+dhi_qar ,4.00,iraqi ,45.00,regional 
 basra ,1.00,tribal ,50.00,regional 
 baghdad,1.00,iraqi ,200.00,international 
-baghdad,5.00,iraqi ,1000.00,international 
-baghdad,5.00,iraqi ,1000.00,regional 
+baghdad,5.00,iraqi ,400.00,international 
+baghdad,5.00,iraqi ,400.00,regional 
 karbala ,3.00,iraqi ,75.00,regional 
 baghdad,4.00,iraqi ,75.00,regional 
 dhi_qar,2.00,iraqi,50.00,regional 
-dhi_qar,2.00,iraqi ,20.00,regional 
+dhi_qar,2.00,iraqi ,30.00,regional 
 dhi_qar,0.00,iraqi ,30.00,regionnal
 baghdad,3.00,iraqi,30.00,regional 
 karbala ,2.00,iraqi,30.00,regional 
-baghdad,1.00,turkish,15.00,regional 
-israel ,8.00,israeli_kurdish,20.00,regional 
+baghdad,1.00,turkish,35.00,regional 
+israel ,8.00,israeli_kurdish,25.00,regional 
 israel ,1.00,israeli_kurdish ,200.00,regional 
 syria ,1.00,syrian_kurdish,75.00,international 
 iran,1.00,kurdish ,150.00,regional 
-diyala,0.00,iraqi_kurdish,20.00,regional 
-israel ,2.00,israeli_kurdish,15.00,regional 
-sulimaniya ,4.00,none,20.00,international 
+diyala,0.00,iraqi_kurdish,30.00,regional 
+israel ,2.00,israeli_kurdish,40.00,regional 
+sulimaniya ,4.00,none,40.00,international 
 kirkuk ,5.00,iraqi,75.00,regional 
 iraqi_kurdistan ,0.00,israeli_kurdish,50.00,regional 
 iraqi_kurdistan ,0.00,israeli_kurdish,250.00,regional 
 iraqi_kurdistan ,0.00,israeli_kurdish,200.00,international 
 iraqi_kurdistan ,0.00,kurdish ,500.00,international 
-baghdad,11.00,iraqi ,20.00,regional 
+baghdad,11.00,iraqi ,35.00,regional 
 anbar ,2.00,iraqi ,75.00,regional 
 baghdad,15.00,tribal ,120.00,regional 
 baghdad,0.00,iraqi ,250.00,international 
@@ -54,22 +54,22 @@ baghdad,5.00,iraqi ,400.00,international
 baghdad,0.00,iraqi ,75.00,international 
 baghdad,9.00,iraqi ,200.00,international 
 anbar ,8.00,iraqi ,250.00,international 
-kirkuk ,7.00,none,15.00,international 
+kirkuk ,7.00,none,45.00,international 
 baghdad,0.00,iraqi ,300.00,international 
-irbil ,3.00,kurdish ,20.00,international 
-baghdad,5.00,iraqi ,20.00,regional 
-baghdad,1.00,iraqi ,5.00,regional 
-baghdad,3.00,iraqi ,15.00,regional 
-baghdad,5.00,none,10.00,regional 
-baghdad,7.00,iraqi ,20.00,regional 
-baghdad,15.00,iraqi ,20.00,regional 
-baghdad,3.00,iraqi ,10.00,regional 
-baghdad,7.00,iraqi ,15.00,regional 
-diyala,1.00,iraqi ,25.00,regional 
-baghdad,1.00,iraqi ,30.00,regional 
+irbil ,3.00,kurdish ,50.00,international 
+baghdad,5.00,iraqi ,45.00,regional 
+baghdad,1.00,iraqi ,60.00,regional 
+baghdad,3.00,iraqi ,45.00,regional 
+baghdad,5.00,none,40.00,regional 
+baghdad,7.00,iraqi ,40.00,regional 
+baghdad,15.00,iraqi ,40.00,regional 
+baghdad,3.00,iraqi ,30.00,regional 
+baghdad,7.00,iraqi ,35.00,regional 
+diyala,1.00,iraqi ,45.00,regional 
+baghdad,1.00,iraqi ,40.00,regional 
 baghdad,0.00,iraqi ,150.00,international 
 baghdad,5.00,iraqi ,75.00,regional 
-anbar ,0.00,iraqi ,5.00,international 
+anbar ,0.00,iraqi ,35.00,international 
 anbar ,4.00,iraqi ,100.00,regional 
 diyala,1.00,none,50.00,regional 
 diyala,5.00,iraqi ,75.00,regional 
