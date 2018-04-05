@@ -150,13 +150,14 @@ scores? If so, what direction is this difference? Does this challenge or
 confirm traditional age stereotypes (note: not all personality traits
 have one)?
 
-**Answer**:
+**Answer**: Yes?
 
 Draw a bar plot of the variable `country` over the whole dataset. Take
 note of the number of countries with a very small number of responses.
 
 ```{r}
-
+ggplot(pf, aes(country))+
+  geom_bar()
 ```
 
 Fitting a model with all of these countries is possible but not very
@@ -168,13 +169,14 @@ Fit a regression model on the entire dataset by the country variable lumped
 into 5 categories.
 
 ```{r}
-
+model <- lm_basic(openness_to_change ~ fct_lump(country, 5), data=pf)
+  reg_table(model, level = .9)
 ```
 
 Using the previous model, which country (not including "Other") has the
 highest score for your trait? Which has the lowest?
 
-**Answer**:
+**Answer**: IN has the highest score and GB has the lowest. 
 
 ## Fitting Sensitivity Scores
 
@@ -182,19 +184,21 @@ Fit a model that predicts sensitivity as a function of the baseline
 score.
 
 ```{r}
-
+model <- lm_basic(baseline~ 1 + sensitivity, data=pf)
+  reg_table(model, level = .9)
 ```
 
 Is the slope statistically significantly different from 1? Why is this an
 interesting question in the context of the data?
 
-**Answer**:
+**Answer**: Yes, the slope is statistically significant. 
 
 Fit a regression model that uses both gender and the baseline score to
 predict your trait.
 
 ```{r}
-
+model <- lm_basic(openness_to_change~ 1 + baseline + gender, data=pf)
+  reg_table(model, level = .9)
 ```
 
 Describe the slope for the gender term in words:
@@ -204,18 +208,18 @@ Describe the slope for the gender term in words:
 Add predictions from the previous model to `pf`.
 
 ```{r}
-
+model <- lm_basic(openness_to_change~ 1 + baseline + gender, data=pf)
+pf <- add_prediction(pf, model)
 ```
 
 Plot the baseline score as a function of `model_pred`, coloring the points
 base on the gender variable.
 
 ```{r}
-
+ggplot(pf, aes(model_pred, baseline))+
+  geom_point(aes(color=gender))
 ```
 
 What do the predicted values look like?
 
-**Answer**:
-
-
+**Answer**: They are identical values
