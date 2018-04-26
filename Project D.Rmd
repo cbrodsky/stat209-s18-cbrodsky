@@ -1,0 +1,93 @@
+---
+title: "Lung Cancer and Poverty in the American Midwest"
+author: "Chris Brodsky"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(out.width = "100%")
+knitr::opts_chunk$set(dpi = 300)
+
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(ggmap)
+library(viridis)
+library(forcats)
+library(smodels)
+library(ggmap)
+```
+
+```{r}
+cancer <- read_csv("https://statsmaths.github.io/stat_data/cancer_inc_data.csv")
+```
+
+
+
+```{r}
+cancer <- read_csv("https://statsmaths.github.io/stat_data/cancer_inc_data.csv")
+  cancer_mw <- filter(cancer, state %in% c("in", "il", "wi", "mn", "ia", "mo", "ks", "ne", "sd", "nd", "oh", "mi"))
+```
+
+##Introduction and Thesis
+
+  Recent data from the American Lung Association shows that lung cancer is the number one killer of Americans annually. Lung cancer rates are known to effect individuals living in closer proximity to industrial and manufacturing areas. According to data from 2013, the United States Midwest region is currently witnessing a resurgence in manufacturing and industrial employment. Indiana, Wisconsin, Ohio, and Iowa are among the top ten states where manufacturing makes up a substantial component of state GDP. This research examines the relationship between lung cancer and poverty rates as well as the intersection of race and poverty. The following data analysis shows that there is a statistically significant relationship between lung cancer and poverty in the American Midwest, as well as between poverty and majority black populations. 
+  
+
+#Results
+  
+  The data inference and graph below illustrate the relationship between lung cancer rates and poverty in Midwestern states. That the confidence interval values for "poverty" are both positive indicates a statistically significant relationship between rates of lung cancer among men over the age of 18 and the percentage of households below the poverty line. The chart below illustrates this relationship graphically. The blue line of best fit indicates a clear linear relationship between rising poverty and lung cancer rates. 
+
+
+```{r}
+model <- lm_basic(lung ~ 1 + poverty, data = cancer_mw)
+  reg_table(model, level = .9)
+```
+
+
+```{r}
+qplot(lung, poverty, data = cancer_mw) + 
+  geom_smooth(method = "lm")+
+  ggtitle("Relationship Between Lung Cancer Rates and Poverty in the American Midwest")+
+  xlab("Lung Cancer Rates")+
+  ylab("Percentage of Households Living Below Poverty Line")
+```
+
+
+  The inference table below further elaborates on the dynamics of poverty and lung cancer in the Midwest by examining the relationship between black majority populations and poverty. Again, the inference table shows the confidence interval values for "black_alone" are both positive indicating a statistically significant relationship between the two variables poverty and black majority populations. Similar to the graph above, the inference yields a clear, although slightly less dramatic, linear relationship between these two variables. Thus, as the percentage of households living below the poverty line increases, so too does the percentage of black majority populations living in those areas. 
+
+
+```{r}
+model <- lm_basic(poverty ~ 1 + black_alone, data = cancer_mw)
+  reg_table(model, level = .9)
+```
+
+```{r}
+qplot(poverty, black_alone, data = cancer_mw)+
+   geom_smooth(method = "lm")
+```
+
+  The map below illustrates the prevalence of lung cancer rates in the Midwest according to colored dots. As the map shows, the areas with the highest rates of lung cancer are concentrated in southeastern Missouri and southwestern Illinois. According to data from the Missouri Community Action Network, the poorest counties in Missouri are concentrated almost entirely in this area with several outlier counties dispersed throughout the state. Data from the Heartland Alliance shows a similar dynamic in southwestern Illinois. Poverty rates are concentrated in the southwestern counties of the state. The cross-border region spanning southeast and southwest Illinois and Missouri respectively suffers from the highest rates of poverty in both states. This data reflects the inferences shown above as well as the map below highlighting the overlap between concentrations of lung cancer and poverty. 
+
+
+```{r}
+qmplot(lon, lat, data = cancer_mw, geom = "blank") +
+  geom_point(aes(color = lung), alpha = 0.8) +
+  scale_color_viridis()+
+  ggtitle("Concentration of Lung Cancer Rates in the American Midwest")
+```
+
+
+##Conclusion
+  
+  The data show clear relationships between poverty and lung cancer rates in the American Midwest and between poverty and race. These dynamics highlight the complexity of national health issues and their overlapping factors. As policymakers seek to tackle economic growth in the form of a revitalized manufacturing sector, they might also consider unintended side effects on national health, poverty, and racial dynamics. This is especially important considering the current opioid crisis which is consuming valuable time and energy from policymakers, not to mention lives lost. Ultimately, this analysis serves to highlight the degree of overlap among major policy concerns affecting the daily lives of millions of Americans in the Midwest. The data examines a case-study of statistically significant relationships in the Midwest although the results are likely relevant and replicable in states and counties around the world.   
+
+
+##References
+
+http://www.areadevelopment.com/RegionalReports/Q1-2013/states-leading-US-manufacturing-resurgence-2665542.shtml http://www.lung.org/about-us/blog/2016/06/lung-cancer-and-pollution.html 
+http://action.heartlandalliance.org/site/MessageViewer?em_id=10361.0 
+http://www.communityaction.org/missouri-poverty-facts/ 
